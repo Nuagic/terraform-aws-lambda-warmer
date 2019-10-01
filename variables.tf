@@ -1,3 +1,7 @@
+variable "enable" {
+  default = true
+}
+
 variable "function_name" {
 }
 
