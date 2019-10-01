@@ -1,3 +1,6 @@
+variable "enable" {
+  default = true
+}
 variable "function_name" {}
 variable "function_arn" {}
 variable "input" { default = "{\"Records\":[]}" }
