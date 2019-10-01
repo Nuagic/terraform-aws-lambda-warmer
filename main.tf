@@ -21,6 +21,6 @@ resource "aws_lambda_permission" "this" {
   action        = "lambda:InvokeFunction"
   function_name = var.function_arn
   principal     = "events.amazonaws.com"
-  source_arn    = aws_cloudwatch_event_rule[0].this.arn
+  source_arn    = aws_cloudwatch_event_rule.this[0].arn
 }
 
