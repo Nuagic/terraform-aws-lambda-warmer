@@ -11,7 +11,7 @@ Terraform 0.11. Pin module version to `~> v1.0`. Submit pull-requests to `terraf
 ## Usage
 
 ```hcl
-# Terraform <= 0.11
+# Terraform 0.11
 module "my-lambda_warmer" {
   source        = "Nuagic/lambda-warmer/aws"
   version       = "~> 1.0"
@@ -21,10 +21,20 @@ module "my-lambda_warmer" {
 ```
 
 ```hcl
-# Terraform <= 0.12
+# Terraform  0.12
 module "my-lambda_warmer" {
   source        = "Nuagic/lambda-warmer/aws"
   version       = "~> 2.0"
+  function_name = aws_lambda_function.my-lambda.function_name
+  function_arn  = aws_lambda_function.my-lambda.arn
+}
+```
+
+```hcl
+# Terraform  0.13
+module "my-lambda_warmer" {
+  source        = "Nuagic/lambda-warmer/aws"
+  version       = "~> 3.0"
   function_name = aws_lambda_function.my-lambda.function_name
   function_arn  = aws_lambda_function.my-lambda.arn
 }
